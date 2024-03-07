@@ -1,0 +1,136 @@
+// FONT
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+// COLORS
+// primary
+// (active input border)
+$c-Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+//  (input errors)
+$c-Red: hsl(0, 100%, 66%);
+
+// neutral
+$c-White: hsl(0, 0%, 100%);
+$c-Light-grayish-violet: hsl(270, 3%, 87%);
+$c-Dark-grayish-violet: hsl(279, 6%, 55%);
+$c-Very-dark-violet: hsl(278, 68%, 11%);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body, header, footer {
+	font-family: "space grotesk";
+	font-size: 15px;
+}
+
+header {
+	background-image: url("../images/bg-main-mobile.png");
+	position: relative;
+	height: 240px;
+	.card:first-child {
+		color: $c-White;
+		height: 160px;
+		width: 280px;
+		background-image: url("../images/bg-card-front.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		bottom: -50px;
+		left: 20px;
+		z-index: 2;
+
+		img {
+			width: 60px;
+			padding: 15px;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 1.4em;
+			font-weight: 400;
+			padding: 15px 0;
+			letter-spacing: 1px;
+		}
+
+		.flex {
+			display: flex;
+			justify-content: space-between;
+
+			p {
+				padding: 0 15px;
+				font-size: 0.8em;
+				font-weight: 100;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.card:nth-child(2) {
+		
+		color: $c-White;
+		height: 160px;
+		width: 280px;
+		background-image: url("../images/bg-card-back.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		z-index: 1;
+		position: absolute;
+		right: 20px;
+		top: 45px;
+		p {
+			position: absolute;
+			right: 35px;
+			top: 67px;
+			font-size: 0.8em;
+		}
+	}
+}
+
+main {
+	padding-top: 80px;
+	form {
+		min-width: 370px;
+
+		label {
+			text-transform: uppercase;
+			color: $c-Very-dark-violet;
+			font-weight: bold;
+			letter-spacing: 2px;
+			font-size: 0.75em;
+		}
+
+		input[type="submit"] {
+			width: 100%;
+		}
+
+		.form-row {
+			width: 90%;
+			margin: auto;
+		}
+
+		input[type="text"] {
+			box-sizing: border-box;
+			width: 100%;
+		}
+
+		.third-row {
+			display: flex;
+
+			.date {
+				display: flex;
+				flex-wrap: wrap;
+				width: 50%;
+				label {
+					width: 100%;
+				}
+
+				input {
+					width: calc(50% - 5px);
+				}
+			}
+		}
+	}
+}

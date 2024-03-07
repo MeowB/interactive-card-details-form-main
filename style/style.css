@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, header, footer {
+  font-family: "space grotesk";
+  font-size: 15px;
+}
+
+header {
+  background-image: url("../images/bg-main-mobile.png");
+  position: relative;
+  height: 240px;
+}
+header .card:first-child {
+  color: white;
+  height: 160px;
+  width: 280px;
+  background-image: url("../images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+  z-index: 2;
+}
+header .card:first-child img {
+  width: 60px;
+  padding: 15px;
+}
+header .card:first-child h1 {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 400;
+  padding: 15px 0;
+  letter-spacing: 1px;
+}
+header .card:first-child .flex {
+  display: flex;
+  justify-content: space-between;
+}
+header .card:first-child .flex p {
+  padding: 0 15px;
+  font-size: 0.8em;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+header .card:nth-child(2) {
+  color: white;
+  height: 160px;
+  width: 280px;
+  background-image: url("../images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  position: absolute;
+  right: 20px;
+  top: 45px;
+}
+header .card:nth-child(2) p {
+  position: absolute;
+  right: 35px;
+  top: 67px;
+  font-size: 0.8em;
+}
+
+main {
+  padding-top: 80px;
+}
+main form {
+  min-width: 370px;
+}
+main form label {
+  text-transform: uppercase;
+  color: #21092f;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 0.75em;
+}
+main form input[type=submit] {
+  width: 100%;
+}
+main form .form-row {
+  width: 90%;
+  margin: auto;
+}
+main form input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+}
+main form .third-row {
+  display: flex;
+}
+main form .third-row .date {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+main form .third-row .date label {
+  width: 100%;
+}
+main form .third-row .date input {
+  width: calc(50% - 5px);
+}
+
+/*# sourceMappingURL=style.css.map */
