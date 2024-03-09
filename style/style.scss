@@ -26,12 +26,18 @@ body, header, footer {
 
 header {
 	background-image: url("../images/bg-main-mobile.png");
+	background-repeat: no-repeat;
+	background-size: cover;
 	position: relative;
 	height: 240px;
-	.card:first-child {
-		color: $c-White;
+
+	.card:first-child, .card:nth-child(2) {
 		height: 160px;
 		width: 280px;
+	}
+
+	.card:first-child {
+		color: $c-White;
 		background-image: url("../images/bg-card-front.png");
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -71,14 +77,12 @@ header {
 	.card:nth-child(2) {
 		
 		color: $c-White;
-		height: 160px;
-		width: 280px;
 		background-image: url("../images/bg-card-back.png");
 		background-repeat: no-repeat;
 		background-size: contain;
 		z-index: 1;
 		position: absolute;
-		right: 20px;
+		left: 70px;
 		top: 45px;
 		p {
 			position: absolute;
@@ -104,6 +108,13 @@ main {
 
 		input[type="submit"] {
 			width: 100%;
+			margin: 5px 5px 5px 0;
+			padding: 15px 0;
+			border-radius: 5px;
+			border: none;
+			background-color: $c-Very-dark-violet;
+			color: $c-White;
+			letter-spacing: 1px;
 		}
 
 		.form-row {
@@ -114,6 +125,10 @@ main {
 		input[type="text"] {
 			box-sizing: border-box;
 			width: 100%;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid $c-Light-grayish-violet;
+			margin: 5px 5px 5px 0;
 		}
 
 		.third-row {
@@ -131,6 +146,66 @@ main {
 					width: calc(50% - 5px);
 				}
 			}
+
+			.cvc {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+
+	.complete-state {
+		display: none;
+	}
+}
+
+@media only screen and(min-width: 1140px) {
+	body {
+		display: flex;
+		flex-wrap: wrap;
+		header {
+			width: 40%;
+			height: 100vh;
+			background-image: url(../images/bg-main-desktop.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			
+
+			.card:first-child, .card:nth-child(2) {
+				height: 190px;
+				width: 350px;
+				background-size: cover;
+			}
+
+			.card:first-child {
+				top: 25%;
+				left: 30%;
+			}
+
+			.card:nth-child(2) {
+				top: 50%;
+				left: 45%;
+
+			}
+		}
+
+		main {
+			width: calc(60% - 160px);
+			padding: 80px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			max-width: 500px;
+
+			.form-row {
+				padding-top: 15px;
+			}
+		}
+
+		footer {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
 		}
 	}
 }
