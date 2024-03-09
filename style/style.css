@@ -73,8 +73,35 @@ header .card:nth-child(2) p {
 main {
   padding-top: 80px;
 }
+main .complete-state {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+main .complete-state img {
+  width: 68px;
+}
+main .complete-state h2 {
+  text-transform: uppercase;
+  padding: 20px 0;
+  letter-spacing: 2px;
+}
+main .complete-state button {
+  width: 80%;
+  max-width: 300px;
+  margin: 50px 5px 5px 0;
+  padding: 15px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: #21092f;
+  color: white;
+  letter-spacing: 1px;
+}
 main form {
   min-width: 370px;
+  display: inline;
 }
 main form label {
   text-transform: uppercase;
@@ -105,6 +132,10 @@ main form input[type=text] {
   border: 1px solid #dedddf;
   margin: 5px 5px 5px 0;
 }
+main form input:hover {
+  border: 1px solid #21092f;
+  cursor: pointer;
+}
 main form .third-row {
   display: flex;
 }
@@ -122,9 +153,7 @@ main form .third-row .date input {
 main form .third-row .cvc {
   display: flex;
   flex-direction: column;
-}
-main .complete-state {
-  display: none;
+  flex-grow: 1;
 }
 
 @media only screen and (min-width: 1140px) {
@@ -148,9 +177,15 @@ main .complete-state {
     top: 25%;
     left: 30%;
   }
+  body header .card:first-child .flex {
+    padding-top: 20px;
+  }
   body header .card:nth-child(2) {
     top: 50%;
     left: 45%;
+  }
+  body header .card:nth-child(2) p {
+    top: 85px;
   }
   body main {
     width: calc(60% - 160px);
@@ -159,6 +194,7 @@ main .complete-state {
     justify-content: center;
     align-items: center;
     max-width: 500px;
+    margin-left: 50px;
   }
   body main .form-row {
     padding-top: 15px;
